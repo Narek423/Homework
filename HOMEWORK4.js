@@ -64,6 +64,27 @@ function sortArr (arr, min, max) {
 sortArr ([4, -8, -8, 3, -1, 0, -10], -10, 7);
 
 
+// N3. Robert jan es mi tarberaknel em avelacum vor asecir naxort@ etqan lav@ chi:
+
+function sortArr (arr, min, max) {
+  let map = new Map;
+  let result = '';
+  let count = Math.abs(max - min)
+  while(--count) {
+    map.set(min++, '');
+  }
+  for (let key of arr) {
+    map.set(key,key + ',' + map.get(key));
+  }
+  for (let key of map.values()) {
+    result += key;
+  }
+  return result.slice(0, result.length - 1).split(',').map(a => +a);
+}
+
+sortArr ([4, -8, -8, 3, 4, -1, 0, -10], -10, 7);
+
+
 // N4.
 
 function allPosibSubsets({arr = [], arr1 = [...arr], arr2 = [...arr], result = []} = {}) {

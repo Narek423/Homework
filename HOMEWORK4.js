@@ -53,15 +53,15 @@ function sortArr (arr, min, max) {
     map.set(i);
   }
   for (let key of arr) {
-    map.set(key, key);
+    map.set(key,[key].concat(map.get(key)));
   }
   for (let key of map.values()) {
-    result.push(key);
+    result = result.concat(key);
   }
   return result.filter(a => a + 0.5);
 }
 
-sortArr ([4, -8, 3, -1, 0, -10], -10, 7);
+sortArr ([4, -8, -8, 3, -1, 0, -10], -10, 7);
 
 
 // N4.

@@ -47,7 +47,7 @@ range(-2, 8);
 // N3.
 
 function sortArr (arr, min, max) {
-  let map = new Map;
+  let map = new Map();
   let result = [];
   for (let i = min; i <= max; i++) {
     map.set(i);
@@ -67,7 +67,7 @@ sortArr ([4, -8, -8, 3, -1, 0, -10], -10, 7);
 // N3. Robert jan es mi tarberaknel em avelacum vor asecir naxort@ etqan lav@ chi:
 
 function sortArr (arr, min, max) {
-  let map = new Map;
+  let map = new Map();
   let result = '';
   let count = Math.abs(max - min)
   while(--count) {
